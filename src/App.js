@@ -1,28 +1,29 @@
+import {useState} from 'react'
 import './App.css'
-import Description from './components/Description'
-import Experience from './components/Experience'
-import Education from './components/Education'
-import Languages from './components/Languages'
-import Skills from './components/Skills'
-import Footer from './components/Footer'
-import Licenses from './components/Licenses'
-import Portfolio from './components/Portfolio'
-import Contact from './components/Contact'
-import Header from './components/Header'
+import {ENGLISH_LANGUAGE_KEY, FARSI_LANGUAGE_KEY} from './Constants'
+import {Localization} from './components/localization/Localization'
+import MainPage from './components/page/Main/MainPage'
+import {getAppLanguage, setAppLanguage} from './utilities/storage'
 
 function App() {
+  const [language, setLanguage] = useState(getAppLanguage() ?? ENGLISH_LANGUAGE_KEY)
+  setAppLanguage(language)
+  Localization.setLanguage(language)
+
+  const onLangClick = (input) => {
+    console.log(input)
+    setLanguage(input)
+    Localization.setLanguage(input)
+  }
+
+  const languages = [
+    {title: 'FA', key: FARSI_LANGUAGE_KEY},
+    {title: 'ENG', key: ENGLISH_LANGUAGE_KEY},
+  ]
+
   return (
-    <div className='App'>
-      <Header />
-      <Description />
-      <Experience />
-      <Education />
-      <Skills />
-      <Languages />
-      <Licenses />
-      <Portfolio />
-      <Contact />
-      <Footer />
+    <div className={`App ${language === FARSI_LANGUAGE_KEY ? 'dir-rtl' : 'dir-ltr'}`}>
+      <MainPage onLangClick={onLangClick} languages={languages} />
     </div>
   )
 }
