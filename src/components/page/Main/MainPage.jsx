@@ -8,11 +8,23 @@ import Portfolio from '../Section/Portfolio'
 import Header from '../Section/Header'
 import AboutMe from '../Section/AboutMe'
 import ContactMe from '../Section/ContactMe'
+import {Localization} from '../../localization/Localization'
 
 const MainPage = ({onLangClick, languages}) => {
+  const navigationItems = [
+    {title: Localization.ABOUT_ME, onClick: () => {}},
+    {title: Localization.EXPERIENCE, onClick: () => {}},
+    {title: Localization.EDUCATION, onClick: () => {}},
+    {title: Localization.SKILLS, onClick: () => {}},
+    {title: Localization.LANGUAGES, onClick: () => {}},
+    {title: Localization.LICENSES, onClick: () => {}},
+    {title: Localization.PORTFOLIO, onClick: () => {}},
+    {title: Localization.CONTACT_ME, onClick: () => {}},
+  ]
+
   return (
     <div className='grid gap-2 mx-12 my-10'>
-      <Header onLangClick={onLangClick} languages={languages} />
+      <Header buttons={navigationItems} onLangClick={onLangClick} languages={languages} />
       <AboutMe />
       <Experience />
       <Education />

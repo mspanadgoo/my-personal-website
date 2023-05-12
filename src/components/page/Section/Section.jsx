@@ -1,6 +1,6 @@
-const Section = ({title, children}) => {
+const Section = ({title, className, children}) => {
   return (
-    <div className='flex gap-5 p-5 border'>
+    <div className={`flex flex-col gap-5 p-5 ${className ? className : ''}`}>
       <h1 className='text-start text-2xl font-bold'>{title}</h1>
       {children}
     </div>

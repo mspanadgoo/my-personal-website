@@ -11,14 +11,13 @@ function App() {
   Localization.setLanguage(language)
 
   const onLangClick = (input) => {
-    console.log(input)
     setLanguage(input)
     Localization.setLanguage(input)
   }
 
   const languages = [
-    {title: 'FA', key: FARSI_LANGUAGE_KEY},
-    {title: 'ENG', key: ENGLISH_LANGUAGE_KEY},
+    {title: 'Fa', key: FARSI_LANGUAGE_KEY},
+    {title: 'Eng', key: ENGLISH_LANGUAGE_KEY},
   ]
 
   return (
