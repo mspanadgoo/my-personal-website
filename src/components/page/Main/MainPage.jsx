@@ -9,30 +9,41 @@ import Header from '../Section/Header'
 import AboutMe from '../Section/AboutMe'
 import ContactMe from '../Section/ContactMe'
 import {Localization} from '../../localization/Localization'
+import {useRef} from 'react'
 
 const MainPage = ({onLangClick, languages}) => {
+  const ref = useRef([])
+
+  const handleRefClick = (id) => {
+    ref?.current[id]?.scrollIntoView({behavior: 'smooth', block: 'center', inline: 'start'})
+  }
+
   const navigationItems = [
-    {title: Localization.ABOUT_ME, onClick: () => {}},
-    {title: Localization.EXPERIENCE, onClick: () => {}},
-    {title: Localization.EDUCATION, onClick: () => {}},
-    {title: Localization.SKILLS, onClick: () => {}},
-    {title: Localization.LANGUAGES, onClick: () => {}},
-    {title: Localization.LICENSES, onClick: () => {}},
-    {title: Localization.PORTFOLIO, onClick: () => {}},
-    {title: Localization.CONTACT_ME, onClick: () => {}},
+    {title: Localization.ABOUT_ME, onClick: () => handleRefClick(0)},
+    {title: Localization.EXPERIENCE, onClick: () => handleRefClick(1)},
+    {title: Localization.EDUCATION, onClick: () => handleRefClick(2)},
+    {title: Localization.SKILLS, onClick: () => handleRefClick(3)},
+    {title: Localization.LANGUAGES, onClick: () => handleRefClick(4)},
+    {title: Localization.LICENSES, onClick: () => handleRefClick(5)},
+    {title: Localization.PORTFOLIO, onClick: () => handleRefClick(6)},
+    {title: Localization.CONTACT_ME, onClick: () => handleRefClick(7)},
   ]
 
   return (
-    <div className='grid gap-2 mx-12 my-10'>
+    <div>
       <Header buttons={navigationItems} onLangClick={onLangClick} languages={languages} />
-      <AboutMe />
-      <Experience />
-      <Education />
-      <Skills />
-      <Languages />
-      <Licenses />
-      <Portfolio />
-      <ContactMe />
+
+      <div className='grid gap-2 mx-12 my-10'>
+        <AboutMe innerRef={(el) => (ref.current[0] = el)} />
+        <Experience innerRef={(el) => (ref.current[1] = el)} />
+        <Education innerRef={(el) => (ref.current[2] = el)} />
+        <Skills innerRef={(el) => (ref.current[3] = el)} />
+        <Languages innerRef={(el) => (ref.current[4] = el)} />
+        <Licenses innerRef={(el) => (ref.current[5] = el)} />
+        <Portfolio innerRef={(el) => (ref.current[6] = el)} />
+        <ContactMe innerRef={(el) => (ref.current[7] = el)} />
+      </div>
+
       <Footer />
     </div>
   )

@@ -21,14 +21,13 @@ const ExperienceHistory = ({history, index}) => {
       <div>
         <button href={companyWebsite}>{companyName}</button>, {cityName}
       </div>
-      {details &&
-        details.map((detail, key) => {
-          return (
-            <div className='px-10' key={key}>
-              ● {detail}
-            </div>
-          )
-        })}
+
+      <ul className='list-disc list-outside px-5'>
+        {details &&
+          details.map((detail, key) => {
+            return <li key={key}>{detail}</li>
+          })}
+      </ul>
     </div>
   )
 }

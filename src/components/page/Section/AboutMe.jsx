@@ -2,9 +2,9 @@ import {Localization} from '../../localization/Localization'
 import profile from '../../../assets/images/profile.png'
 import Section from './Section'
 
-const AboutMe = () => {
+const AboutMe = ({innerRef}) => {
   return (
-    <Section>
+    <Section className={'border'} innerRef={innerRef}>
       <div className='flex flex-row'>
         <img className='h-44' src={profile} alt='profile' />
         <div className='grid gap-1'>

@@ -3,7 +3,7 @@ import Section from './Section'
 
 const Header = ({buttons, onLangClick, languages}) => {
   return (
-    <Section className='sticky'>
+    <Section className='sticky top-0 bg-white border-b'>
       <div className='flex flex-row justify-between'>
         <div className='flex gap-5'>
           {buttons &&
