@@ -11,7 +11,7 @@ import ContactMe from '../Section/ContactMe'
 import {Localization} from '../../localization/Localization'
 import {useRef} from 'react'
 
-const MainPage = ({onLangClick, languages}) => {
+const MainPage = ({onLangClick, languages, socialMediaItems}) => {
   const ref = useRef([])
 
   const handleRefClick = (id) => {
@@ -44,7 +44,7 @@ const MainPage = ({onLangClick, languages}) => {
         <ContactMe innerRef={(el) => (ref.current[7] = el)} />
       </div>
 
-      <Footer />
+      <Footer socialMediaItems={socialMediaItems} />
     </div>
   )
 }

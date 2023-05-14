@@ -20,9 +20,18 @@ function App() {
     {title: 'Eng', key: ENGLISH_LANGUAGE_KEY},
   ]
 
+  const socialMediaItems = [
+    {title: 'Linkedin', link: 'https://www.linkedin.com/in/mspanadgoo/'},
+    {
+      title: 'StackOverflow',
+      link: 'https://stackoverflow.com/users/7365545/mohammad-sadegh-panadgoo',
+    },
+    {title: 'Github', link: 'https://github.com/mspanadgoo'},
+  ]
+
   return (
     <div className={`App ${language === FARSI_LANGUAGE_KEY ? 'dir-rtl' : 'dir-ltr'}`}>
-      <MainPage onLangClick={onLangClick} languages={languages} />
+      <MainPage onLangClick={onLangClick} languages={languages} socialMediaItems={socialMediaItems} />
     </div>
   )
 }

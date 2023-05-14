@@ -4,7 +4,7 @@ import Section from './Section'
 
 const AboutMe = ({innerRef}) => {
   return (
-    <Section className={'border'} innerRef={innerRef}>
+    <Section className={'border rounded-3xl shadow-sm'} innerRef={innerRef}>
       <div className='flex flex-row'>
         <img className='h-44' src={profile} alt='profile' />
         <div className='grid gap-1'>

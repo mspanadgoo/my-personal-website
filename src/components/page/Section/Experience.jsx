@@ -10,7 +10,11 @@ const Experience = ({innerRef}) => {
       innerRef={innerRef}
     >
       {Localization.EXPERIENCE_HISTORY.map((history, key) => {
-        return <ExperienceHistory history={history} index={key} />
+        return (
+          <div key={key}>
+            <ExperienceHistory history={history} />
+          </div>
+        )
       })}
     </Section>
   )

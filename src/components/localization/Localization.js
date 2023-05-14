@@ -10,7 +10,7 @@ export const Localization = new LocalizedStrings({
     PORTFOLIO: 'PORTFOLIO',
     CONTACT_ME: 'CONTACT ME',
     ABOUT_ME: 'ABOUT ME',
-    PRESENET: 'Present',
+    PRESENT: 'Present',
 
     FIRST_NAME: 'Mohammad Sadegh',
     LAST_NAME: 'Panadgoo',
@@ -73,7 +73,7 @@ export const Localization = new LocalizedStrings({
     PORTFOLIO: 'نمونه کارها',
     CONTACT_ME: 'تماس با من',
     ABOUT_ME: 'درباره من',
-    PRESENET: 'تا به حال',
+    PRESENT: 'تا به حال',
 
     FIRST_NAME: 'محمد صادق',
     LAST_NAME: 'پنادگو',

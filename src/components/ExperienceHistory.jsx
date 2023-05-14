@@ -1,6 +1,6 @@
 import {Localization} from './localization/Localization'
 
-const ExperienceHistory = ({history, index}) => {
+const ExperienceHistory = ({history}) => {
   const jobTitle = history?.jobTitle ?? ''
   const companyName = history?.companyName ?? ''
   const companyWebsite = history?.companyWebsite ?? ''
@@ -11,11 +11,11 @@ const ExperienceHistory = ({history, index}) => {
   const details = history?.details ?? []
 
   return (
-    <div className='flex flex-col text-start gap-2 mx-10' key={index}>
+    <div className='flex flex-col text-start gap-2 mx-10'>
       <div className='flex gap-5'>
         <div className='font-semibold'>{jobTitle}</div>
         <div>
-          {startDate} - {isPresent ? Localization.PRESENET : endDate}
+          {startDate} - {isPresent ? Localization.PRESENT : endDate}
         </div>
       </div>
       <div>
