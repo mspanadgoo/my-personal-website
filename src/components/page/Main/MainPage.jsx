@@ -33,7 +33,7 @@ const MainPage = ({onLangClick, languages, socialMediaItems}) => {
     <div>
       <Header buttons={navigationItems} onLangClick={onLangClick} languages={languages} />
 
-      <div className='grid gap-2 mx-12 my-10'>
+      <div className='grid gap-5 mx-96 my-10'>
         <AboutMe innerRef={(el) => (ref.current[0] = el)} />
         <Experience innerRef={(el) => (ref.current[1] = el)} />
         <Education innerRef={(el) => (ref.current[2] = el)} />

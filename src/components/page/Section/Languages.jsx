@@ -2,11 +2,21 @@ import {Localization} from '../../localization/Localization'
 import Section from './Section'
 
 const Languages = ({innerRef}) => {
+  let languages = [
+    {name: 'Farsi', level: 'Native or bilingual proficiency'},
+    {name: 'English', level: 'Professional working proficiency'},
+  ]
   return (
-    <Section title={Localization.LANGUAGES} innerRef={innerRef}>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita quam sapiente ea ut cum
-      atque iure sit illum cupiditate, velit tenetur delectus commodi et eum voluptas nostrum neque
-      quisquam harum.
+    <Section className={'rounded-3xl bg-white shadow-2xl'} title={Localization.LANGUAGES} innerRef={innerRef}>
+      <div className='grid grid-cols-2 gap-5'>
+        {languages.map((item, index) => {
+          return (
+            <div className='rounded-2xl bg-gray-300 h-16 grid grid-cols-2 content-center'>
+              <div className='font-bold'>{item.name}:</div> <div className='text-left'>{item.level}</div>
+            </div>
+          )
+        })}
+      </div>
     </Section>
   )
 }

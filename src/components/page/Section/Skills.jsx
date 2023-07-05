@@ -2,28 +2,66 @@ import {Localization} from '../../localization/Localization'
 import Section from './Section'
 
 const Skills = ({innerRef}) => {
+  let skills = [
+    'NodeJS',
+    'ReactJS',
+    'MongoDB',
+    'Javascript',
+    'HTML/CSS',
+    'UI/UX Design',
+    'iOS',
+    'Objective-C',
+    'Swift',
+    'Xcode',
+    'Cocoa Touch',
+    'Core Data',
+    'SQLite',
+    'UIKit',
+    'SwiftUI',
+    'MVVM',
+    'MVC',
+    'ARC',
+    'GCD',
+    'HIG',
+    'Rest APIs',
+    'HTTP',
+    'JSON',
+    'Auto Layout',
+    'Cocoapods',
+    'APNS',
+    'Git',
+    'SVN',
+    'Unit Test',
+    'UI Test',
+    'CI/CD',
+    'SOLID',
+    'Clean Swift',
+    'Firebase',
+    'Analytics',
+    'Crashlytics',
+    'Multi Threading',
+    'Design Patterns',
+    'Algorithms',
+    'Operations',
+    'Push Notifications',
+    'Realm',
+    'Combine',
+    'TDD',
+    'Functional Programming',
+    'Reactive Programming',
+    'Core Animation',
+  ]
   return (
-    <Section title={Localization.SKILLS} innerRef={innerRef}>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure asperiores consectetur, culpa
-      autem nam unde illo aliquam omnis praesentium placeat qui corrupti atque, minima optio
-      quisquam eveniet magni cupiditate beatae? Lorem, ipsum dolor sit amet consectetur adipisicing
-      elit. Totam laudantium hic inventore quas dolore, ex facere sed, adipisci consequuntur sit
-      nesciunt magni est atque omnis rerum. Nostrum asperiores molestiae nesciunt. Lorem ipsum dolor
-      sit amet consectetur, adipisicing elit. Ducimus odio nulla unde! Eos dolorem ratione impedit
-      non facilis reprehenderit, cumque distinctio maxime nam adipisci amet molestias laboriosam
-      nulla, mollitia modi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-      consequatur amet quasi eos impedit ipsam doloribus iste, voluptas quas culpa placeat quam
-      accusantium recusandae adipisci, facilis ullam eum, illum at! Lorem ipsum dolor sit amet
-      consectetur adipisicing elit. Necessitatibus, vitae ut voluptatibus natus, fuga rem nemo
-      impedit tenetur excepturi ad quis culpa. Magnam cum molestias, minima nisi quisquam dicta
-      possimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo repellat ab modi quae
-      neque sunt officia incidunt mollitia eius amet, provident ipsum qui illo doloremque distinctio
-      veritatis? Minima, ad voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Aliquid ducimus eaque ut voluptates iure facere dignissimos et vitae suscipit, harum aliquam
-      saepe quibusdam, vel, amet itaque quia accusantium rerum dolor. Lorem ipsum dolor sit amet
-      consectetur adipisicing elit. Maxime molestiae ad repellendus aliquam voluptate, impedit vitae
-      mollitia, nobis perferendis architecto suscipit eveniet assumenda obcaecati fuga incidunt
-      magnam, quod doloribus quas!
+    <Section className={'rounded-3xl bg-white shadow-2xl'} title={Localization.SKILLS} innerRef={innerRef}>
+      <div className='grid grid-cols-6 gap-4'>
+        {skills.map((item, index) => {
+          return (
+            <div className='shadow-sm rounded-2xl h-16 bg-gray-400 align-middle grid content-center'>
+              <div className='text-center'>{item}</div>
+            </div>
+          )
+        })}
+      </div>
     </Section>
   )
 }
