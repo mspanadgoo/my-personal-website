@@ -4,11 +4,11 @@ const LanguageChanger = ({onClick, languages}) => {
   }
 
   return (
-    <div className='flex gap-1 border'>
+    <div className='flex gap-1 bg-white'>
       {languages &&
         languages.map((lang, key) => {
           return (
-            <button key={key} className='p-1' onClick={() => onLangClick(lang.key)}>
+            <button className={'text-black font-bold p-1'} key={key} onClick={() => onLangClick(lang.key)}>
               {lang.title}
             </button>
           )

@@ -6,7 +6,7 @@ const Experience = ({innerRef}) => {
   return (
     <Section
       title={Localization.EXPERIENCE}
-      className={'rounded-3xl bg-slate-300 shadow-2xl'}
+      className={'bg-yellow-500'}
       innerRef={innerRef}
     >
       {Localization.EXPERIENCE_HISTORY.map((history, key) => {

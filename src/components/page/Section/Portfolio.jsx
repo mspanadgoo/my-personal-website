@@ -3,7 +3,7 @@ import Section from './Section'
 
 const Portfolio = ({innerRef}) => {
   return (
-    <Section title={Localization.PORTFOLIO} innerRef={innerRef}>
+    <Section className={"bg-green-500"} title={Localization.PORTFOLIO} innerRef={innerRef}>
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure asperiores consectetur, culpa
       autem nam unde illo aliquam omnis praesentium placeat qui corrupti atque, minima optio
       quisquam eveniet magni cupiditate beatae? Lorem, ipsum dolor sit amet consectetur adipisicing

@@ -10,6 +10,7 @@ export const Localization = new LocalizedStrings({
     PORTFOLIO: 'PORTFOLIO',
     CONTACT_ME: 'CONTACT ME',
     ABOUT_ME: 'ABOUT ME',
+    HOME: 'HOME',
     PRESENT: 'Present',
 
     FIRST_NAME: 'Mohammad Sadegh',
@@ -100,6 +101,10 @@ export const Localization = new LocalizedStrings({
         details: [],
       },
     ],
+    LANGUAGE_SKILLS: [
+      {name: 'English', level: 'Professional working proficiency'},
+      {name: 'Farsi', level: 'Native or bilingual proficiency'},
+    ],
   },
   fa: {
     EDUCATION: 'تحصیلات',
@@ -110,6 +115,7 @@ export const Localization = new LocalizedStrings({
     PORTFOLIO: 'نمونه کارها',
     CONTACT_ME: 'تماس با من',
     ABOUT_ME: 'درباره من',
+    HOME: 'خانه',
     PRESENT: 'تا به حال',
 
     FIRST_NAME: 'محمد صادق',
@@ -199,6 +205,10 @@ export const Localization = new LocalizedStrings({
         cityName: 'تهران',
         details: [],
       },
+    ],
+    LANGUAGE_SKILLS: [
+      {name: 'انگلیسی', level: 'حرفه‌ای'},
+      {name: 'فارسی', level: 'زبان مادری'},
     ],
   },
 })
